@@ -261,7 +261,10 @@
         .hero-title .white { color: var(--text-main); }
         .hero-title .cyber {
             color: var(--cyan-accent);
+            font-size: clamp(1.5rem, 3.5vw, 2.4rem);
             text-shadow: 0 0 30px var(--cyan-glow);
+            display: block;
+            margin-top: 8px;
         }
         .hero-subtitle {
             font-size: clamp(1.2rem, 2.4vw, 1.62rem);
@@ -1673,7 +1676,7 @@
         h3dLight2.position.set(-3, -2, 2);
         h3dScene.add(h3dLight2);
 
-        const orbitControls = new OrbitControls(h3dCamera, h3dCanvas);
+        const orbitControls = new OrbitControls(h3dCamera, hero3dCanvas);
         orbitControls.enableDamping = true;
         orbitControls.dampingFactor = 0.05;
         orbitControls.enableZoom = true;
